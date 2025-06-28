@@ -1,4 +1,4 @@
-package sn.ngone;
+package sn.ngone.entite;
 
 
 import jakarta.persistence.Column;

@@ -1,5 +1,6 @@
 package sn.ngone.entite;
 
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,33 +10,26 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "emprunts")
+@Table(name = "amendes")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Emprunt {
+public class Amende {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate dateEmprunt;
+    private double montant;
 
-    private LocalDate dateRetourPrevue;
+    private String motif;
 
-    private LocalDate dateRetourEffective;
+    private String statut; // "payée" ou "impayée"
 
-    private boolean prolonge;
+    private LocalDate dateCreation;
 
     @ManyToOne
     private Utilisateur utilisateur;
-
-    @ManyToOne
-    private Livre livre;
 }
-
-
-
 
 

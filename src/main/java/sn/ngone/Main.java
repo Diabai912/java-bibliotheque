@@ -5,15 +5,12 @@ import sn.ngone.config.HibernateUtil;
 
 public class Main {
     public static void main(String[] args) {
-        Session session = null;
-        try {
-            session = HibernateUtil.getSessionFactory().openSession();
-            System.out.println("✅ Connexion Hibernate réussie !");
+        // Ouvrir une session Hibernate
+        try (Session session = HibernateUtil.getSessionFactory().openSession()) {
+            System.out.println("✅ Connexion réussie ! Les entités devraient créer les tables si tout est correct.");
         } catch (Exception e) {
-            System.out.println("❌ Échec de la connexion Hibernate !");
+            System.out.println("❌ Erreur de connexion : " + e.getMessage());
             e.printStackTrace();
-        } finally {
-            if (session != null) session.close();
         }
     }
 }

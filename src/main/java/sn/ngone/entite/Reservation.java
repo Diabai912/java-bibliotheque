@@ -9,33 +9,26 @@ import lombok.Setter;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "emprunts")
+@Table(name = "reservations")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Emprunt {
+public class Reservation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDate dateEmprunt;
-
-    private LocalDate dateRetourPrevue;
-
-    private LocalDate dateRetourEffective;
-
-    private boolean prolonge;
-
-    @ManyToOne
-    private Utilisateur utilisateur;
+    private LocalDate dateReservation;
+    private LocalDate dateLimite;
+    private int position;
 
     @ManyToOne
     private Livre livre;
+
+    @ManyToOne
+    private Utilisateur utilisateur;
 }
-
-
 
 
 

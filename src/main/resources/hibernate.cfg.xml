@@ -18,7 +18,24 @@
 
         <!-- Mapping des entités -->
         <mapping class="sn.ngone.entite.Utilisateur"/>
-        <mapping class="sn.ngone.entite.Participant"/>
+        <mapping class="sn.ngone.entite.Emprunt"/>
+        <mapping class="sn.ngone.entite.Enseignant"/>
+        <mapping class="sn.ngone.entite.Etudiant"/>
+        <mapping class="sn.ngone.entite.Categorie"/>
+        <mapping class="sn.ngone.entite.Administrateur"/>
+        <mapping class="sn.ngone.entite.Amende"/>
+        <mapping class="sn.ngone.entite.Livre"/>
+        <mapping class="sn.ngone.entite.Ouvrage"/>
+        <mapping class="sn.ngone.entite.Reservation"/>
+        <mapping class="sn.ngone.entite.Service"/>
+
+
+
+
+
+
+
+
         <!-- Ajoute ici les autres entités plus tard : Livre, Emprunt, Réservation, etc. -->
     </session-factory>
 </hibernate-configuration>
